@@ -4,7 +4,7 @@
 ## 📛 名前募集中！！ [Issues](https://github.com/sakuzyokun/SimpleRenamer/issues)に書き込め！！
 ⏱ **軽量メモ帳アプリ** for Windows Vista / 7 / 8 / 8.1 / 10 / 11  
 🌱 **メモリ使用量 5〜8MB / CPU数％で動作！**  
-📦 シンプル・高速なメモ帳 
+📦 シンプル・高速なリネーマー 
 
 <!--
 ![screenshot](https://sakuzyokun.github.io/LiteExplorer/files/win7_LE.png) <!-- 画像があれば。なければ省略してOK -->
