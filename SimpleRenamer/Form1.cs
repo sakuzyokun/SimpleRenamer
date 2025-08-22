@@ -43,6 +43,20 @@ namespace SimpleRenamer
             }
         }
 
+        private string ReplaceDateTimeTokens(string input, string filePath)
+        {
+            DateTime lastWrite = File.GetLastWriteTime(filePath);
+
+            return input
+                .Replace("{YYYY}", lastWrite.ToString("yyyy"))
+                .Replace("{YY}", lastWrite.ToString("yy"))
+                .Replace("{MM}", lastWrite.ToString("MM"))
+                .Replace("{DD}", lastWrite.ToString("dd"))
+                .Replace("{hh}", lastWrite.ToString("HH"))
+                .Replace("{mm}", lastWrite.ToString("mm"))
+                .Replace("{ss}", lastWrite.ToString("ss"));
+        }
+
         private void BtnPreview_Click(object sender, EventArgs e)
         {
             listBoxPreview.Items.Clear();
@@ -53,7 +67,12 @@ namespace SimpleRenamer
                 string oldPath = listBoxFiles.Items[i].ToString();
                 string dir = Path.GetDirectoryName(oldPath);
                 string ext = Path.GetExtension(oldPath);
-                string newName = $"{txtPrefix.Text}{startNum + i}{txtSuffix.Text}{ext}";
+
+                // プレースホルダー置換
+                string prefix = ReplaceDateTimeTokens(txtPrefix.Text, oldPath);
+                string suffix = ReplaceDateTimeTokens(txtSuffix.Text, oldPath);
+
+                string newName = $"{prefix}{startNum + i}{suffix}{ext}";
                 listBoxPreview.Items.Add(Path.Combine(dir, newName));
             }
         }
@@ -95,13 +114,5 @@ namespace SimpleRenamer
             listBoxFiles.Items.Clear();
             listBoxPreview.Items.Clear();
         }
-
-        /*[STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }*/
     }
 }

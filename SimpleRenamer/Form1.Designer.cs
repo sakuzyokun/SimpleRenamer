@@ -36,12 +36,15 @@
             this.btnRename = new System.Windows.Forms.Button();
             this.btnRemoveSelected = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnClearAll = new System.Windows.Forms.Button();
             this.listBoxFiles = new System.Windows.Forms.ListBox();
             this.listBoxPreview = new System.Windows.Forms.ListBox();
             this.txtPrefix = new System.Windows.Forms.TextBox();
             this.txtSuffix = new System.Windows.Forms.TextBox();
             this.numericStart = new System.Windows.Forms.NumericUpDown();
+            this.btnClearAll = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericStart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,21 +94,12 @@
             this.toolTip1.SetToolTip(this.btnRemoveSelected, "選択した項目のみ削除します");
             this.btnRemoveSelected.UseVisualStyleBackColor = true;
             // 
-            // btnClearAll
-            // 
-            this.btnClearAll.Location = new System.Drawing.Point(417, 12);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(75, 23);
-            this.btnClearAll.TabIndex = 5;
-            this.btnClearAll.Text = "全削除";
-            this.btnClearAll.UseVisualStyleBackColor = true;
-            // 
             // listBoxFiles
             // 
             this.listBoxFiles.FormattingEnabled = true;
             this.listBoxFiles.HorizontalScrollbar = true;
             this.listBoxFiles.ItemHeight = 12;
-            this.listBoxFiles.Location = new System.Drawing.Point(12, 66);
+            this.listBoxFiles.Location = new System.Drawing.Point(12, 78);
             this.listBoxFiles.Name = "listBoxFiles";
             this.listBoxFiles.ScrollAlwaysVisible = true;
             this.listBoxFiles.Size = new System.Drawing.Size(237, 184);
@@ -117,7 +111,7 @@
             this.listBoxPreview.FormattingEnabled = true;
             this.listBoxPreview.HorizontalScrollbar = true;
             this.listBoxPreview.ItemHeight = 12;
-            this.listBoxPreview.Location = new System.Drawing.Point(255, 66);
+            this.listBoxPreview.Location = new System.Drawing.Point(255, 78);
             this.listBoxPreview.Name = "listBoxPreview";
             this.listBoxPreview.ScrollAlwaysVisible = true;
             this.listBoxPreview.Size = new System.Drawing.Size(237, 184);
@@ -126,7 +120,7 @@
             // 
             // txtPrefix
             // 
-            this.txtPrefix.Location = new System.Drawing.Point(12, 41);
+            this.txtPrefix.Location = new System.Drawing.Point(12, 53);
             this.txtPrefix.Name = "txtPrefix";
             this.txtPrefix.Size = new System.Drawing.Size(156, 19);
             this.txtPrefix.TabIndex = 8;
@@ -134,7 +128,7 @@
             // 
             // txtSuffix
             // 
-            this.txtSuffix.Location = new System.Drawing.Point(336, 42);
+            this.txtSuffix.Location = new System.Drawing.Point(336, 53);
             this.txtSuffix.Name = "txtSuffix";
             this.txtSuffix.Size = new System.Drawing.Size(156, 19);
             this.txtSuffix.TabIndex = 9;
@@ -142,17 +136,56 @@
             // 
             // numericStart
             // 
-            this.numericStart.Location = new System.Drawing.Point(174, 42);
+            this.numericStart.Location = new System.Drawing.Point(174, 53);
             this.numericStart.Name = "numericStart";
             this.numericStart.Size = new System.Drawing.Size(156, 19);
             this.numericStart.TabIndex = 10;
             this.toolTip1.SetToolTip(this.numericStart, "連番数字\r\nここに数字を入力すると入力した数値から始まります");
             // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Location = new System.Drawing.Point(417, 12);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(75, 23);
+            this.btnClearAll.TabIndex = 5;
+            this.btnClearAll.Text = "全削除";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 12);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "数字の前に入れる文字";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(172, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "連番数字";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(336, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 12);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "数字の後に入れる文字";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 262);
+            this.ClientSize = new System.Drawing.Size(504, 274);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericStart);
             this.Controls.Add(this.txtSuffix);
             this.Controls.Add(this.txtPrefix);
@@ -187,6 +220,9 @@
         private System.Windows.Forms.TextBox txtPrefix;
         private System.Windows.Forms.TextBox txtSuffix;
         private System.Windows.Forms.NumericUpDown numericStart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
