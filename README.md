@@ -47,13 +47,13 @@ Windows 11 でのSimpleRenamerを起動した様子 (v1.00)
 ## 🔧 ダウンロード
 
 ▶ 最新版はこちらからダウンロード：  
-👉 **[https://sakuzyokun.github.io/SimpleStopwatch/](https://sakuzyokun.github.io/SimpleRenamer/)**
+👉 **[https://sakuzyokun.github.io/SimpleRenamer/](https://sakuzyokun.github.io/SimpleRenamer/)**
 
 ---
 
 ## 📜 ライセンス・改造について
 
-SimpleNotepadは自由に**改造・再配布**してOKです！  
+SimpleRenamerは自由に**改造・再配布**してOKです！  
 ただし、以下の一文を**`README.md`やソースコードの先頭コメント**に明記してください：
 
 ```c
