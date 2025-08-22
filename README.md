@@ -39,7 +39,7 @@
 <!-- ↓ 適宜画像を貼る -->
 <!--Windows 7 でのLiteExplorerを起動した様子 (v1.10)  
 ![screenshot](https://sakuzyokun.github.io/LiteExplorer/files/win7_LE.png)  -->
-Windows 11 でのSimpleRenamerを起動した様子 (v1.00)  
+Windows 11 でのSimpleRenamerを起動した様子 (v1.0.0)  
 ![screenshot](https://github.com/sakuzyokun/SimpleRenamer/blob/main/SimpleRenamer_b1.png?raw=true)  
 
 ---
