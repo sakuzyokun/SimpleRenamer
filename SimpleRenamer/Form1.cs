@@ -86,7 +86,12 @@ namespace SimpleRenamer
                 string oldPath = listBoxFiles.Items[i].ToString();
                 string dir = Path.GetDirectoryName(oldPath);
                 string ext = Path.GetExtension(oldPath);
-                string newPath = Path.Combine(dir, $"{txtPrefix.Text}{startNum + i}{txtSuffix.Text}{ext}");
+
+                // ★ ここでプレースホルダー置換を入れる
+                string prefix = ReplaceDateTimeTokens(txtPrefix.Text, oldPath);
+                string suffix = ReplaceDateTimeTokens(txtSuffix.Text, oldPath);
+
+                string newPath = Path.Combine(dir, $"{prefix}{startNum + i}{suffix}{ext}");
 
                 try
                 {
@@ -102,6 +107,7 @@ namespace SimpleRenamer
             MessageBox.Show("リネーム完了！");
             BtnPreview_Click(null, null); // プレビュー更新
         }
+
 
         private void BtnRemoveSelected_Click(object sender, EventArgs e)
         {
